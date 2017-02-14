@@ -37,12 +37,12 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
   
   
 	window.notificationReceived = function (notification) {
-		//alert(JSON.stringify(notification))
-		//alert(notification.event);
+		alert(JSON.stringify(notification))
+		alert(notification.event);
 		switch(notification.event) {
 			case 'registered':
 				if (notification.regid.length > 0 ) {
-					//prompt("Copy to clipboard", notification.regid);
+					prompt("Copy to clipboard", notification.regid);
 					localStorage.setItem('regId',notification.regid)
 					$http.post('http://applogic.in/demo/smartedu/api/GeneralAPI/pushReg',{regId:notification.regid})     
 					.success(function(data) {
