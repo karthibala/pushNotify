@@ -10,16 +10,16 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
 	
 	document.addEventListener("deviceready", function(){
 		$cordovaPush.register(androidConfig).then(function(result) {
-			//alert('You are registered for get latest notification');
+			alert('You are registered for get latest notification');
 		  // Success
 		}, function(err) {
-			//alert(err);
+			alert(err);
 		  // Error
 		})
 		$cordovaPush.unregister(options).then(function(result) {
-			//alert(result);
+			alert(result);
 		}, function(err) {
-			//alert(err);
+			alert(err);
 		})
 
 	}, false);
